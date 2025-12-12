@@ -29,7 +29,7 @@ export function CommandInjectionDemo({ controls }: CommandInjectionDemoProps) {
   const [consoleOutput, setConsoleOutput] = useState<string[]>([]);
   const [safetyOn, setSafetyOn] = useState(false);
 
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (!controls.isPlaying) return;

@@ -53,7 +53,7 @@ export function IDORDemo({ controls }: IDORDemoProps) {
   const [message, setMessage] = useState('');
   const [showChecklist, setShowChecklist] = useState(false);
 
-  const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
+  const timeoutsRef = useRef<number[]>([]);
 
   const addTimeout = (fn: () => void, delay: number) => {
     const id = setTimeout(fn, delay);

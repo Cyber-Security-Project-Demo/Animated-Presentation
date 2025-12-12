@@ -28,7 +28,7 @@ export function CSRFDemo({ controls }: CSRFDemoProps) {
   useEffect(() => {
     if (!controls.isPlaying) return;
 
-    let timer: NodeJS.Timeout;
+    let timer: number;
     const advance = () => {
       switch (stage) {
         case 'SAFE_BANK':

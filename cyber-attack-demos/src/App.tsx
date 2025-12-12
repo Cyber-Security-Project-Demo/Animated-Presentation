@@ -7,8 +7,9 @@ import { XSSDemo } from './demos/XSSDemo';
 import { IDORDemo } from './demos/IDORDemo';
 import { CSRFDemo } from './demos/CSRFDemo';
 import { CommandInjectionDemo } from './demos/CommandInjectionDemo';
+import { APIExploitationDemo } from './demos/APIExploitationDemo';
 
-export type AttackType = 'sqli' | 'xss' | 'idor' | 'csrf' | 'command-injection';
+export type AttackType = 'sqli' | 'xss' | 'idor' | 'csrf' | 'command-injection' | 'api-exploitation';
 
 export interface DemoControls {
   isPlaying: boolean;
@@ -45,6 +46,8 @@ function App() {
         return <CSRFDemo controls={demoControls} />;
       case 'command-injection':
         return <CommandInjectionDemo controls={demoControls} />;
+      case 'api-exploitation':
+        return <APIExploitationDemo controls={demoControls} />;
       default:
         return null;
     }

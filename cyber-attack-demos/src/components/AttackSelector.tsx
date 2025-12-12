@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, Code, Key, Shield, Terminal } from 'lucide-react';
+import { Database, Code, Key, Shield, Terminal, Globe } from 'lucide-react';
 import { AttackType } from '../App';
 
 interface AttackSelectorProps {
@@ -57,6 +57,16 @@ const attacks = [
     bgColor: 'bg-green-50',
     borderColor: 'border-green-200',
     textColor: 'text-green-700'
+  },
+  {
+    id: 'api-exploitation' as AttackType,
+    title: 'API Exploitation',
+    description: 'Learn how attackers convert secure POST requests to dangerous GET requests',
+    icon: Globe,
+    color: 'from-indigo-500 to-indigo-600',
+    bgColor: 'bg-indigo-50',
+    borderColor: 'border-indigo-200',
+    textColor: 'text-indigo-700'
   }
 ];
 
